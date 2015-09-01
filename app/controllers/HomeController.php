@@ -15,9 +15,11 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	public function showHome()
 	{
-		return View::make('hello');
+		$comments = Comment::select('comentario', 'created_at as fecha')->orderBy('fecha', 'desc')->get();
+		return View::make('home')
+		->with('comments', $comments);
 	}
 
 }

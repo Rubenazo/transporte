@@ -11,7 +11,14 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('home');
-});
+Route::get('/', 'HomeController@showHome');
+
+Route::get('status', 'StatusController@getStatus');
+Route::post('comment', 'ForumController@postComment');
+
+
+Route::get('admin', 'AdminController@showAdmin');
+Route::post('update', 'AdminController@postUpdate');
+
+
+

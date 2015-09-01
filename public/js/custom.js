@@ -4,45 +4,85 @@ $(document).ready(function() {
 	/* 									LATERAL PANEL						                  */
 
 	//open the lateral panel
-	$('#routes-btn').on('click', function(event){
+	$('#rutas-btn').on('click', function(event){
 		event.preventDefault();
-		$('#routes.cd-panel').addClass('is-visible');
+		$('#rutas.cd-panel').addClass('is-visible');
+	});
+	$('#rutas img').on('click', function(event){
+		event.preventDefault();
+		$('#ruta.cd-panel').addClass('is-visible');
 	});
 	$('#status-btn').on('click', function(event){
 		event.preventDefault();
 		$('#status.cd-panel').addClass('is-visible');
 	});
+	$('#mision-btn').on('click', function(event){
+		event.preventDefault();
+		$('#mision.cd-panel').addClass('is-visible');
+	});
+	$('#tarifas-btn').on('click', function(event){
+		event.preventDefault();
+		$('#tarifas.cd-panel').addClass('is-visible');
+	});
+	$('#comentarios-btn').on('click', function(event){
+		event.preventDefault();
+		$('#comentarios.cd-panel').addClass('is-visible');
+	});
 	//close the lateral panel
 	$('.cd-panel').on('click', function(event){
-		if( $(event.target).is('#routes.cd-panel') || $(event.target).is('.cd-panel-close') ) { 
-			$('.cd-panel').removeClass('is-visible');
+		if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') || $(event.target).is('.sidebar-close') ) { 
+			$('.cd-panel[id!="rutas"]').removeClass('is-visible');
+			event.preventDefault();
+		}
+	});
+	$('#rutas').on('click', function(event){
+		if( $(event.target).is('.sidebar-close') ) { 
+			$('#rutas').removeClass('is-visible');
 			event.preventDefault();
 		}
 	});
 
 	////////////////////////////////////////////////////////////////////////////////////////////
+	/* 									AJAX for the Status	    			                  */
 
-	$('#bancos').change(function() {
-		var id = $('#bancos option:selected').attr('value');
+	getStatus();
+
+	function getStatus() {
 		
 		$.ajax({
-			url: '../formupago',
+			url: '../public/status',
 			type: 'GET',
 			dataType: 'json',
-			data: {'bancoid': id},
-			success:function(response)
-			{	
-				$('#cuentas').slideUp('slow', function() { 
-					$('#cuentas .table').empty();
-					for (var i in response['cuentas'])
+			success:function(response) {
+
+				$('#status .table').empty();
+				for (var i in response['status'])
+				{
+					if (response['status'][i].estado == 3)
 					{
-						$('#cuentas .table').append('<tr> <td>' + response['cuentas'][i].numero + '</td> <td>' + response['cuentas'][i].tipo + 
-							               '</td> <td> <input type="radio" name="num_cuenta_id" value=' + response['cuentas'][i].id + '> </td> </tr>');
+						$('#status .table').append('<tr> <td>' + response['status'][i].ruta + 
+							'</td> <td> <span class="btn btn-success" >En puerta</span> </td> </tr>');
 					}
-					$('#cuentas').slideDown('slow'); 
-				});
+					if (response['status'][i].estado == 2)
+					{
+						$('#status .table').append('<tr> <td>' + response['status'][i].ruta + 
+							'</td> <td> <span class="btn btn-warning">En camino</span> </td> </tr>');
+					}
+					if (response['status'][i].estado == 1)
+					{
+						$('#status .table').append('<tr> <td>' + response['status'][i].ruta + 
+							'</td> <td> <span class="btn btn-danger">Se murio</span> </td> </tr>');
+					}
+				}
+				setTimeout(getStatus, 10000);
 			}
 		});
-	});
+	}	
+
+	////////////////////////////////////////////////////////////////////////////////////////////
 	
+	$('#rutas img').hover(function() {
+		$(this).siblings().fadeToggle('fast')
+	});
+
 });
