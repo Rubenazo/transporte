@@ -8,7 +8,7 @@ $(document).ready(function() {
 		event.preventDefault();
 		$('#rutas.cd-panel').addClass('is-visible');
 	});
-	$('#rutas img').on('click', function(event){
+	$('#rutas .col-xs-3').on('click', function(event){
 		event.preventDefault();
 		$('#ruta.cd-panel').addClass('is-visible');
 	});
@@ -81,8 +81,10 @@ $(document).ready(function() {
 
 	////////////////////////////////////////////////////////////////////////////////////////////
 	
-	$('#rutas img').hover(function() {
-		$(this).siblings().fadeToggle('fast')
+	$('.carousel-caption').hide();
+	$('#rutas .col-xs-3').hover(function() {
+		$(this).children('img').toggleClass('sepia');
+		$(this).children('.carousel-caption').fadeToggle('slow')
 	});
 
 });

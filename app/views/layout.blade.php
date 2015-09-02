@@ -60,7 +60,7 @@
         <div class="container">
 
             <!-- sidebar -->
-            <div class="column col-sm-1 col-xs-1 sidebar-offcanvas" id="sidebar">
+            <div class="column col-xs-1 sidebar-offcanvas" id="sidebar">
                 
                 <div id="sidebar-header">
                     <h3>ruta<br/>uba</h3>
@@ -100,8 +100,8 @@
 
                 @yield('content')
 
-                <div class="footer">
-
+                <div class="footer text-right">
+                    <h3>rutauba</h3>
                 </div>
 
             </div>

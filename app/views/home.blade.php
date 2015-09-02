@@ -10,14 +10,41 @@
 	<div id="rutas" class="cd-panel from-left">
 		<div class="cd-panel-container col-xs-1" style="width:100%">
 			<div class="cd-panel-content">
-				<div class="column col-sm-1 col-xs-1 sidebar-offcanvas" id="sidebar">               
+				<div class="column col-xs-1 sidebar-offcanvas" id="sidebar">               
 	                <h2 style="width:45%"><span class="glyphicon glyphicon-remove-circle sidebar-close"></span></h2>	             
 	            </div>
-	            <div class="col-xs-11" style="padding:0; height:100%">
-					<img src="img/startup/startup-retina-4in.png" class="col-xs-3">
-					<img src="img/startup/startup-retina-4in.png" class="col-xs-3">
-					<img src="img/startup/startup-retina-4in.png" class="col-xs-3">
-					<img src="img/startup/startup-retina-4in.png" class="col-xs-3">
+	            <div class="col-xs-11">
+					<div class="col-xs-3">
+				        <img src="img/startup/startup-retina-4in.png" class="img-responsive">
+				        <div class="carousel-caption">
+				        	<h3>Parada El Limon</h3>
+				        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a viverra urna. Etiam auctor odio blandit dignissim ultricies. Pellentesque venenatis velit viverra, malesuada nisi sit amet, porttitor dui. Etiam non dictum lorem. Fusce non ipsum lacinia, sagittis eros nec, pellentesque lorem. Donec massa odio, facilisis et vulputate sed, pharetra vitae erat.</p>
+				        </div>	
+					</div>
+
+					<div class="col-xs-3">
+				        <img src="img/startup/startup-retina-4in.png" class="img-responsive">
+				        <div class="carousel-caption">
+				        	<h3>Parada Terminal</h3>
+				        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a viverra urna. Etiam auctor odio blandit dignissim ultricies. Pellentesque venenatis velit viverra, malesuada nisi sit amet, porttitor dui. Etiam non dictum lorem. Fusce non ipsum lacinia, sagittis eros nec, pellentesque lorem. Donec massa odio, facilisis et vulputate sed, pharetra vitae erat.</p>
+				        </div>	
+					</div>
+
+					<div class="col-xs-3">
+				        <img src="img/startup/startup-retina-4in.png" class="img-responsive">
+				        <div class="carousel-caption">
+				        	<h3>Parada Turmero</h3>
+				        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a viverra urna. Etiam auctor odio blandit dignissim ultricies. Pellentesque venenatis velit viverra, malesuada nisi sit amet, porttitor dui. Etiam non dictum lorem. Fusce non ipsum lacinia, sagittis eros nec, pellentesque lorem. Donec massa odio, facilisis et vulputate sed, pharetra vitae erat.</p>
+				        </div>	
+					</div>
+
+					<div class="col-xs-3">
+				        <img src="img/startup/startup-retina-4in.png" class="img-responsive">
+				        <div class="carousel-caption">
+				        	<h3>Parada La Victoria</h3>
+				        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a viverra urna. Etiam auctor odio blandit dignissim ultricies. Pellentesque venenatis velit viverra, malesuada nisi sit amet, porttitor dui. Etiam non dictum lorem. Fusce non ipsum lacinia, sagittis eros nec, pellentesque lorem. Donec massa odio, facilisis et vulputate sed, pharetra vitae erat.</p>
+				        </div>	
+					</div>
 				</div>
 			</div> <!-- cd-panel-content -->
 		</div> <!-- cd-panel-container -->
