@@ -17,9 +17,7 @@ class HomeController extends BaseController {
 
 	public function showHome()
 	{
-		$comments = Comment::select('comentario', 'created_at as fecha')->orderBy('fecha', 'desc')->get();
-		return View::make('home')
-		->with('comments', $comments);
+		return View::make('home');
 	}
 
 }

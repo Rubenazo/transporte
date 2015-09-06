@@ -80,11 +80,52 @@ $(document).ready(function() {
 	}	
 
 	////////////////////////////////////////////////////////////////////////////////////////////
+	/* 									AJAX for the Status	    			                  */
+
+	getComments();
+
+	$('#submit').click(function(event) {
+	
+		$.ajax({
+			url: '../public/comment',
+			type: 'POST',
+			data: $('#comment').serialize(),
+			success:function(response) {
+				$('#comment')[0].reset();
+				getComments();
+			}
+		});
+
+		return false;
+	});
+
+
+	function getComments() {
+
+		$.ajax({
+			url: '../public/comment',
+			type: 'GET',
+			dataType: 'json',
+			success:function(response) {
+
+				$('#forum > ul').empty();
+				for (var i in response['comments'])
+				{
+					$('#forum > ul').append('<li class="list-group-item"> <ul> <li class="list-group-item">' +
+						response['comments'][i].fecha + '</li> <li class="list-group-item">' +
+						response['comments'][i].comentario + '</li> </ul> </li> '); 
+				}
+			}
+		});
+	}
+
+
+	////////////////////////////////////////////////////////////////////////////////////////////
 	
 	$('.carousel-caption').hide();
 	$('#rutas .col-xs-3').hover(function() {
 		$(this).children('img').toggleClass('sepia');
-		$(this).children('.carousel-caption').fadeToggle('slow')
+		$(this).children('.carousel-caption').stop().fadeToggle('slow');
 	});
 
 });

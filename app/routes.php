@@ -14,6 +14,8 @@
 Route::get('/', 'HomeController@showHome');
 
 Route::get('status', 'StatusController@getStatus');
+
+Route::get('comment', 'ForumController@getComments');
 Route::post('comment', 'ForumController@postComment');
 
 

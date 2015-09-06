@@ -51,11 +51,11 @@
 	</div> <!-- cd-panel -->
 
 	<div id="ruta" class="cd-panel from-right">
-		<header class="cd-panel-header" style="width:50%">
+		<header class="cd-panel-header">
 			<a href="#0" class="cd-panel-close">Close</a>
 		</header>
 	 
-		<div class="cd-panel-container" style="width:50%">
+		<div class="cd-panel-container">
 			<div class="cd-panel-content">
 				<h1>Ruta</h1>
 
@@ -70,16 +70,16 @@
 
 
 	<div id="status" class="cd-panel from-right">
-		<header class="cd-panel-header" style="width:50%">
+		<header class="cd-panel-header">
 			<a href="#0" class="cd-panel-close">Close</a>
 		</header>
 	 
-		<div class="cd-panel-container" style="width:50%">
+		<div class="cd-panel-container">
 			<div class="cd-panel-content">
 				<h1>Status</h1>
 
 				<div class="panel">
-		  			<table class="table" style="margin-bottom:0">
+		  			<table class="table">
 			
 		  			</table>
   				</div>
@@ -92,11 +92,11 @@
 
 
 	<div id="mision" class="cd-panel from-right">
-		<header class="cd-panel-header" style="width:50%">
+		<header class="cd-panel-header">
 			<a href="#0" class="cd-panel-close">Close</a>
 		</header>
 	 
-		<div class="cd-panel-container" style="width:50%">
+		<div class="cd-panel-container">
 			<div class="cd-panel-content">
 				<h1>Misión y Visión</h1>
 
@@ -111,16 +111,48 @@
 
 
 	<div id="tarifas" class="cd-panel from-right">
-		<header class="cd-panel-header" style="width:50%">
+		<header class="cd-panel-header">
 			<a href="#0" class="cd-panel-close">Close</a>
 		</header>
 	 
-		<div class="cd-panel-container" style="width:50%">
+		<div class="cd-panel-container">
 			<div class="cd-panel-content">
 				<h1>Tarifas</h1>
 
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a viverra urna. Etiam auctor odio blandit dignissim ultricies. Pellentesque venenatis velit viverra, malesuada nisi sit amet, porttitor dui. Etiam non dictum lorem. Fusce non ipsum lacinia, sagittis eros nec, pellentesque lorem. Donec massa odio, facilisis et vulputate sed, pharetra vitae erat. Nunc pretium elit non mi euismod, quis euismod urna laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras sollicitudin eget diam cursus fringilla. Cras et nunc orci. Fusce porta vehicula ipsum, sed sodales turpis eleifend sed. Proin hendrerit id diam at suscipit. Sed fermentum mi et lorem iaculis, eget ullamcorper lectus blandit. Sed quis ex ac tortor posuere bibendum pharetra sed dolor. Etiam posuere quis ipsum in pellentesque.</p>
-
+				<div class="panel">
+		  			<table class="table">
+		  				<tr>
+		  					<th>Ruta</th>
+		  					<th>Diurno</th>
+		  					<th>Nocturno</th>
+		  				</tr>
+						<tr>
+							<td>El Limón</td>
+							<td>70 Bs</td>
+							<td>80 Bs</td>
+						</tr>
+						<tr>
+							<td>Terminal</td>
+							<td>50 Bs</td>
+							<td>60 Bs</td>
+						</tr>
+						<tr>
+							<td>Turmero</td>
+							<td>50 Bs</td>
+							<td>60 Bs</td>
+						</tr>
+						<tr>
+							<td>Cagua</td>
+							<td>60 Bs</td>
+							<td>70 Bs</td>
+						</tr>
+						<tr>
+							<td>La Victoria</td>
+							<td>80 Bs</td>
+							<td>100 Bs</td>
+						</tr>
+		  			</table>
+  				</div>
 			</div> <!-- cd-panel-content -->
 			<div>
 
@@ -130,32 +162,25 @@
 
 
 	<div id="comentarios" class="cd-panel from-right">
-		<header class="cd-panel-header" style="width:50%">
+		<header class="cd-panel-header">
 			<a href="#0" class="cd-panel-close">Close</a>
 		</header>
 	 
-		<div class="cd-panel-container" style="width:50%">
+		<div class="cd-panel-container">
 			<div class="cd-panel-content">
 				<h1>Comentarios</h1>
 
-				<div class="panel panel-default">
+				<div id="forum" class="panel panel-default">
 					<ul class="list-group">
-						@foreach($comments as $comment)
-							<li class="list-group-item">
-								<ul>
-									<li class="list-group-item"> {{ $comment->fecha }} </li>
-									<li class="list-group-item"> {{ $comment->comentario }} </li>
-								</ul>
-							</li>
-						@endforeach
+					
 					</ul>
 				</div>
 
-				{{ Form::open(array('url' => 'comment')) }}	
+				{{ Form::open(array('url' => 'comment', 'id'=>'comment')) }}	
 					<div class="form-group">
 						{{ Form::textarea('message', Input::old('message'), array('class'=>'form-control', 'placeholder'=>'Escribir comentario...', 'rows'=>'3', 'maxlength'=>'140', 'autocomplete'=>'off')) }}
 					</div>
-					{{ Form::submit('Enviar', array('class'=>'btn btn-warning')) }}
+					{{ Form::submit('Enviar', array('id'=>'submit', 'class'=>'btn btn-warning')) }}
 				{{ Form::close() }}
 
   				<div>

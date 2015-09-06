@@ -46,6 +46,9 @@
 	background-color: darkorange;
 }
 
+#status tr {
+	border-bottom: dashed 2px grey;
+}
 
 
 /*****************************************************************
@@ -146,10 +149,6 @@ html, body, .container, #sidebar {
 	height: 100%;
 }
 
-tr {
-	border-bottom: dashed 2px grey;
-}
-
 nav {
 	border: 0 !important;
 }
@@ -174,7 +173,7 @@ nav {
 	/*...*/
 	position: fixed;
 	top: -50px;
-	width: 90%;
+	width: 50%;
 	height: 50px;
 	transition: top 0.3s 0s;
 }
@@ -195,7 +194,7 @@ nav {
 .cd-panel-container {
 	/*...*/
 	position: fixed;
-	width: 90%;
+	width: 50%;
 	height: 100%;
 	top: 0;
 	right: 0;
