@@ -4,8 +4,7 @@
 
 <div class="row marketing">
 	
-	<img src="img/map.png">
-
+	<div id="map"></div>
 
 	<div id="rutas" class="cd-panel from-left">
 		<div class="cd-panel-container col-xs-1" style="width:100%">
@@ -14,35 +13,55 @@
 	                <h2 style="width:45%"><span class="glyphicon glyphicon-remove-circle sidebar-close"></span></h2>	             
 	            </div>
 	            <div class="col-xs-11">
-					<div class="col-xs-3">
+					<div class="col-xs-3" data-title="El Limón" data-text="En sentido Oeste- Este, el servicio de transporte Universidad Bicentenaria de Aragua (UBA)- El Limón (municipio Mario Briceño Iragorry), hace recorrido por las avenidas José Casanova Godoy, Universidad y Caracas.<br/>
+					Se realizan tres paradas: Coliseo Rafael Romero Bolívar, Terrazas El Limón  y pasarela del Seguro Social de San José.">
 				        <img src="img/startup/startup-retina-4in.png" class="img-responsive">
 				        <div class="carousel-caption">
-				        	<h3>Parada El Limon</h3>
-				        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a viverra urna. Etiam auctor odio blandit dignissim ultricies. Pellentesque venenatis velit viverra, malesuada nisi sit amet, porttitor dui. Etiam non dictum lorem. Fusce non ipsum lacinia, sagittis eros nec, pellentesque lorem. Donec massa odio, facilisis et vulputate sed, pharetra vitae erat.</p>
+				        	<h3>El Limón</h3>
+				        	<ul>
+				        		<li>Coliseo</li>
+				        		<li>Terrazas El Limón</li>
+				        		<li>Seguro Social San José</li>
+				        	</ul>
 				        </div>	
 					</div>
 
-					<div class="col-xs-3">
+					<div class="col-xs-3" data-title="Terminal" data-text="El servicio de transporte que presta la empresa True C.A en su ruta Universidad Bicentenaria de Aragua (UBA)- Terminal Central de Maracay, realiza recorrido por las avenidas José Casanova Godoy y Fuerzas Aéreas.<br/>
+					Cumple con tres paradas: adyacencias de las residencias Parque Choroní (Base Aragua), Centro Comercial Parque Aragua. La parada final es frente a Lunch Pan (avenida principal de San Agustín)">
 				        <img src="img/startup/startup-retina-4in.png" class="img-responsive">
 				        <div class="carousel-caption">
-				        	<h3>Parada Terminal</h3>
-				        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a viverra urna. Etiam auctor odio blandit dignissim ultricies. Pellentesque venenatis velit viverra, malesuada nisi sit amet, porttitor dui. Etiam non dictum lorem. Fusce non ipsum lacinia, sagittis eros nec, pellentesque lorem. Donec massa odio, facilisis et vulputate sed, pharetra vitae erat.</p>
+				        	<h3>Terminal</h3>
+				        	<ul>
+				        		<li>Parque Choroní</li>
+				        		<li>Parque Aragua</li>
+				        		<li>Lunch Pan</li>
+				        	</ul>
 				        </div>	
 					</div>
 
-					<div class="col-xs-3">
+					<div class="col-xs-3" data-title="Turmero / Cagua" data-text="El recorrido se inicia por la avenida Intercomunal Maracay- Turmero. Se ingresa al municipio Santiago Mariño por el distribuidor La Julia hasta el centro de Turmero.<br/> La ruta continúa hacia La Encrucijada hasta llegar a la Panadería Don Pan, ubicada en el centro de Cagua.">
 				        <img src="img/startup/startup-retina-4in.png" class="img-responsive">
 				        <div class="carousel-caption">
-				        	<h3>Parada Turmero</h3>
-				        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a viverra urna. Etiam auctor odio blandit dignissim ultricies. Pellentesque venenatis velit viverra, malesuada nisi sit amet, porttitor dui. Etiam non dictum lorem. Fusce non ipsum lacinia, sagittis eros nec, pellentesque lorem. Donec massa odio, facilisis et vulputate sed, pharetra vitae erat.</p>
+				        	<h3>Turmero / Cagua</h3>
+				        	<ul>
+				        		<li>Centro de Turmero</li>
+				        		<li>Encrucijada</li>
+				        		<li>Don Pan</li>
+				        	</ul>
 				        </div>	
 					</div>
 
-					<div class="col-xs-3">
+					<div class="col-xs-3" data-title="La Victoria" data-text="El traslado de pasajeros de la ruta Universidad Bicentenaria de Aragua (UBA)- La Victoria se ejecuta por la Autopista Regional del Centro (ARC).<br/> Se disponen de siete paradas: Peaje de La Victoria, Centro Comercial Morichal, Plaza Italia, tres puntos en la  Urbanización La Mora I y uno en La Mora II.">
 				        <img src="img/startup/startup-retina-4in.png" class="img-responsive">
 				        <div class="carousel-caption">
-				        	<h3>Parada La Victoria</h3>
-				        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a viverra urna. Etiam auctor odio blandit dignissim ultricies. Pellentesque venenatis velit viverra, malesuada nisi sit amet, porttitor dui. Etiam non dictum lorem. Fusce non ipsum lacinia, sagittis eros nec, pellentesque lorem. Donec massa odio, facilisis et vulputate sed, pharetra vitae erat.</p>
+				        	<h3>La Victoria</h3>
+				        	<ul>
+				        		<li>Peaje</li>
+				        		<li>C.C. Morichal</li>
+				        		<li>Plaza Italia</li>
+				        		<li>La Mora I</li>
+				        		<li>La Mora II</li>
+				        	</ul>
 				        </div>	
 					</div>
 				</div>
@@ -57,9 +76,11 @@
 	 
 		<div class="cd-panel-container">
 			<div class="cd-panel-content">
-				<h1>Ruta</h1>
+				<h1></h1>
 
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a viverra urna. Etiam auctor odio blandit dignissim ultricies. Pellentesque venenatis velit viverra, malesuada nisi sit amet, porttitor dui. Etiam non dictum lorem. Fusce non ipsum lacinia, sagittis eros nec, pellentesque lorem. Donec massa odio, facilisis et vulputate sed, pharetra vitae erat. Nunc pretium elit non mi euismod, quis euismod urna laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras sollicitudin eget diam cursus fringilla. Cras et nunc orci. Fusce porta vehicula ipsum, sed sodales turpis eleifend sed. Proin hendrerit id diam at suscipit. Sed fermentum mi et lorem iaculis, eget ullamcorper lectus blandit. Sed quis ex ac tortor posuere bibendum pharetra sed dolor. Etiam posuere quis ipsum in pellentesque.</p>
+				<p></p>
+
+				<h4>Choferes</h4>
 			
 			</div> <!-- cd-panel-content -->
 			<div>
@@ -98,10 +119,13 @@
 	 
 		<div class="cd-panel-container">
 			<div class="cd-panel-content">
-				<h1>Misión y Visión</h1>
+				<h1>Misión</h1>
 
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a viverra urna. Etiam auctor odio blandit dignissim ultricies. Pellentesque venenatis velit viverra, malesuada nisi sit amet, porttitor dui. Etiam non dictum lorem. Fusce non ipsum lacinia, sagittis eros nec, pellentesque lorem. Donec massa odio, facilisis et vulputate sed, pharetra vitae erat. Nunc pretium elit non mi euismod, quis euismod urna laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras sollicitudin eget diam cursus fringilla. Cras et nunc orci. Fusce porta vehicula ipsum, sed sodales turpis eleifend sed. Proin hendrerit id diam at suscipit. Sed fermentum mi et lorem iaculis, eget ullamcorper lectus blandit. Sed quis ex ac tortor posuere bibendum pharetra sed dolor. Etiam posuere quis ipsum in pellentesque.</p>
+				<p>Satisfacer la necesidades diarias de los usuarios en materia de transporte mediante una experiencia de excelencia en calidad de tiempo, comodidad y seguridad; con personal calificado y capacitado para la operación de unidades debidamente acondicionadas para garantizar al servicio de transporte ejecutivo que nuestros usuarios merecen.</p>
 
+				<h1>Visión</h1>
+
+				<p>Consolidarnos y llegar a ser la principal alternativa de transporte ejecutivo para los usuarios, mediante una propuesta de alto valor y de carácter interactivo que permita el crecimiento y la expansión; manteniendo los principios fundamentales para brindar cada día un mejor servicio de manera eficiente.</p>
 			</div> <!-- cd-panel-content -->
 			<div>
 
@@ -153,6 +177,9 @@
 						</tr>
 		  			</table>
   				</div>
+  				<h4>Horario de Actividades</h4>
+	  			<i>Lunes a Viernes: 6:00am - 11:00pm</i>
+	  			<i>Sabados: 7:00am - 6:00pm</i>
 			</div> <!-- cd-panel-content -->
 			<div>
 

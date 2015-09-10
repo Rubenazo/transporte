@@ -42,8 +42,8 @@
         <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
         -->
 
-        <link rel="stylesheet" href="slide-in-panel/css/reset.css"> 
-        <link rel="stylesheet" href="slide-in-panel/css/style.css">
+        <link rel="stylesheet" href="css/reset.css"> 
+        <link rel="stylesheet" href="css/slide-in-panel.css">
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
@@ -60,7 +60,7 @@
         <div class="container">
 
             <!-- sidebar -->
-            <div class="column col-xs-1 sidebar-offcanvas" id="sidebar">
+            <div class="column col-xs-1 hidden-xs" id="sidebar">
                 
                 <div id="sidebar-header">
                     <h3>ruta<br/>uba</h3>
@@ -71,7 +71,7 @@
             </div>
             <!-- /sidebar -->
            
-            <div class="sub-container col-xs-11">
+            <div class="sub-container col-sm-11">
 
                 <nav class="header navbar navbar-default">
                     <div class="container-fluid">
@@ -110,10 +110,13 @@
 
         <script src="js/vendor/jquery-2.1.0.min.js"></script>
         <script src="js/helper.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/main.js"></script>    
 
         <script src="js/bootstrap.js"></script>
         <script src="js/custom.js"></script>
+
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8g7akf4R7bcfLNCwktwgYsATlAMvDxlk&callback=window.initMap">
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
