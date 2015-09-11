@@ -28,6 +28,10 @@ $(document).ready(function() {
 		event.preventDefault();
 		$('#comentarios.cd-panel').addClass('is-visible');
 	});
+	$('#menu-btn').on('click', function(event){
+		event.preventDefault();
+		$('#menu.cd-panel').addClass('is-visible');
+	});
 	//close the lateral panel
 	$('.cd-panel').on('click', function(event){
 		if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') || $(event.target).is('.sidebar-close') ) { 

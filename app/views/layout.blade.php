@@ -66,7 +66,7 @@
                     <h3>ruta<br/>uba</h3>
                 </div>
 
-                <h2 id="rutas-btn"><span class="glyphicon glyphicon-remove-circle"></span>Rutas</h2>
+                <h2 id="rutas-btn"><span class="glyphicon glyphicon-plus-sign"></span>Rutas</h2>
               
             </div>
             <!-- /sidebar -->
@@ -75,28 +75,26 @@
 
                 <nav class="header navbar navbar-default">
                     <div class="container-fluid">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-    navbar-collapse-1" aria-expanded="false">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-      
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav">
-                                <li id="status-btn"><a>Status</a></li>
-                                <li id="mision-btn"><a>Mision y Vision</a></li>
-                                <li id="tarifas-btn"><a>Tarifas</a></li>
-                                <li id="comentarios-btn"><a>Comentarios</a></li>
-                                <li><a>{{ Carbon\Carbon::now()->format('h:i:A') }}</a></li> 
-                            </ul>
-                        </div><!-- /.navbar-collapse -->
+                        <ul class="nav navbar-nav hidden-xs">
+                            <li id="status-btn"><a>Status</a></li>
+                            <li id="mision-btn"><a>Mision y Vision</a></li>
+                            <li id="tarifas-btn"><a>Tarifas</a></li>
+                            <li id="comentarios-btn"><a>Comentarios</a></li>
+                        </ul>
+                        <ul id="mobile" class="nav navbar-nav">
+                            <li id="menu-btn" class="hidden-sm hidden-md"><a><span class="glyphicon glyphicon-menu-hamburger"></span></a></li>
+                            <li class="text-right"><a>{{ Carbon\Carbon::now()->format('h:i:A') }}</a></li> 
+                        </ul>
                     </div><!-- /.container-fluid -->
                 </nav>
+
+                <div id="menu" class="cd-panel from-left">
+                    <div class="cd-panel-container">
+                        <div class="cd-panel-content">
+                            
+                        </div> <!-- cd-panel-content -->
+                    </div> <!-- cd-panel-container -->
+                </div> <!-- cd-panel -->
 
                 @yield('content')
 
