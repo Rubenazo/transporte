@@ -9,15 +9,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
         <meta http-equiv="cleartype" content="on">
 
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
-        <link rel="shortcut icon" sizes="196x196" href="img/touch/touch-icon-196x196.png">
-        <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/logo-144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/logo-114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/logo-72.png">
+        <link rel="apple-touch-icon-precomposed" href="img/touch/logo-57.png">
+        <link rel="shortcut icon" sizes="196x196" href="img/touch/logo-196.png">
+        <link rel="shortcut icon" href="img/touch/logo-57.png">
 
         <!-- Tile icon for Win8 (144x144 + tile color) -->
-        <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileImage" content="img/touch/logo-144.png">
         <meta name="msapplication-TileColor" content="#222222">
 
         <!-- SEO: If mobile URL is different from desktop URL, add a canonical link to the desktop page -->
@@ -26,9 +26,8 @@
         -->
 
         <!-- Add to homescreen for Chrome on Android -->
-        <!--
+
         <meta name="mobile-web-app-capable" content="yes">
-        -->
 
         <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
         <!--
@@ -66,7 +65,7 @@
                     <h3>ruta<br/>uba</h3>
                 </div>
 
-                <h2 id="rutas-btn"><span class="glyphicon glyphicon-plus-sign"></span>Rutas</h2>
+                <h2 class="rutas-btn"><span class="glyphicon glyphicon-plus-sign"></span>Rutas</h2>
               
             </div>
             <!-- /sidebar -->
@@ -76,29 +75,36 @@
                 <nav class="header navbar navbar-default">
                     <div class="container-fluid">
                         <ul class="nav navbar-nav hidden-xs">
-                            <li id="status-btn"><a>Status</a></li>
-                            <li id="mision-btn"><a>Mision y Vision</a></li>
-                            <li id="tarifas-btn"><a>Tarifas</a></li>
-                            <li id="comentarios-btn"><a>Comentarios</a></li>
+                            <li class="status-btn"><a>Status</a></li>
+                            <li class="mision-btn"><a>Mision y Vision</a></li>
+                            <li class="tarifas-btn"><a>Tarifas</a></li>
+                            <li class="comentarios-btn"><a>Comentarios</a></li>
                         </ul>
-                        <ul id="mobile" class="nav navbar-nav">
-                            <li id="menu-btn" class="hidden-sm hidden-md"><a><span class="glyphicon glyphicon-menu-hamburger"></span></a></li>
-                            <li class="text-right"><a>{{ Carbon\Carbon::now()->format('h:i:A') }}</a></li> 
+                        <ul id="mobile-header" class="nav navbar-nav">
+                            <li class="menu-btn visible-xs"><a><span class="glyphicon glyphicon-menu-hamburger"></span></a></li>
+                            <li id="time"><a></a></li> 
                         </ul>
                     </div><!-- /.container-fluid -->
                 </nav>
 
-                <div id="menu" class="cd-panel from-left">
+                <div id="menu" class="cd-panel from-left visible-xs">
                     <div class="cd-panel-container">
                         <div class="cd-panel-content">
-                            
+                            <ul class="list-group">
+                                <li class="list-group-item rutas-mobile-btn" data-title="Rutas">Rutas</li>
+                                <li class="list-group-item status-btn" data-title="Status">Status</li>
+                                <li class="list-group-item mision-btn" data-title="Misión y Visión">Mision y Vision</li>
+                                <li class="list-group-item tarifas-btn" data-title="Tarifas">Tarifas</li>
+                                <li class="list-group-item comentarios-btn" data-title="Comentarios">Comentarios</li>
+                            </ul>
                         </div> <!-- cd-panel-content -->
                     </div> <!-- cd-panel-container -->
                 </div> <!-- cd-panel -->
 
                 @yield('content')
 
-                <div class="footer text-right">
+                <div class="footer">
+                    <img src="img/logo.png">
                     <h3>rutauba</h3>
                 </div>
 

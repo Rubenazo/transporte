@@ -2,8 +2,34 @@
 	ID's SECTION
 *****************************************************************/
 
+#comentarios .panel {
+	max-height: 53%;
+	overflow: auto;
+}
+
 #map {
 	height: 100%;
+}
+
+#menu {
+	top: 71px;
+}
+
+#menu .cd-panel-container {
+	top: 71px;
+	background-color: grey;
+}
+
+#menu .cd-panel-content {
+	padding-top: 20px;
+	color: white;
+	font-weight: bold;
+}
+
+#menu li {
+	background-color: grey;
+	border: 0;
+	cursor: pointer;
 }
 
 #mision p, #ruta p {
@@ -13,38 +39,87 @@
 	text-align: justify;
 }
 
-#mobile {
+#mobile-header {
 	margin: 0;
 }
 
-#mobile li {
-	display: table-cell;
-	vertical-align: middle;
+#ruta img:first-of-type {
+	display: inline-block;
+    width: 60px;
+}
+
+#ruta h1 {
+	display: inline-block;
+    vertical-align: bottom;
+    margin-left: 20px;
+}
+
+#ruta .cd-panel-content img:last-of-type {
+	width: 100%;
+}
+
+#rutas .carousel-caption img {
+	margin: auto;
+	width: 75%;
 }
 
 #rutas .cd-panel-content {
 	padding: 0;
 }
 
-#rutas .col-xs-11, #rutas .col-xs-3, #rutas img, #rutas div:not([class="carousel-caption"]) {
+#rutas .col-xs-11, #rutas .col-xs-3, #rutas .col-xs-3 > img, #rutas div:not([class="carousel-caption"]) {
 	height: 100%;
 	padding: 0;
 }
 
+#rutas-mobile .panel, #rutas-mobile .panel-heading {
+	background-color: grey;
+	border:	0;
+}
+
+#rutas-mobile .panel-title a {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#rutas-mobile .panel-body {
+	text-align: justify;
+}
+
+#rutas-mobile .panel-title img {
+	width: 50px;
+	margin-right: 10px;
+}
+
+#rutas-mobile .panel-body img {
+	width: 100%;
+}
+
+#rutas-mobile span {
+	float: right;
+	line-height: 50px;
+}
+
 #sidebar {
 	padding: 0;
-	background-color: orange;
+	background-color: #EF7E1B;
 }
 
 #sidebar h2 {
-	position: absolute;
-	margin-left: 20%;
-	margin-top: 350%;
+	display: flex;
+	position: relative;
+	margin-left: 25%;
+	top: 50%;
 	color: white;
 	cursor: pointer;
 	font-size: 3em;
 	font-weight: bold;
-	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	   -moz-transform: rotate(-90deg);
+	    -ms-transform: rotate(-90deg);
+	     -o-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
 	transform-origin: left top 0;
 }
 
@@ -57,24 +132,91 @@
 
 #sidebar span {
 	display: inline;
-	padding-right: 20px;
+	margin-right: 20px;
 }
 
 #sidebar-header {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	text-align: center;
-	background-color: darkorange;
+	background-color: #EC681F;
+}
+
+#status img {
+	width: 50px;
+}
+
+#status span {
+	line-height: 50px;
 }
 
 #status tr {
 	border-bottom: dashed 2px grey;
 }
 
+#time {
+	display: inline-block;
+	float: right;
+	cursor: default;
+}
+
+@media (max-width: 767px) {
+  .footer {
+  	z-index: 100 !important;
+  }
+
+  #mision .cd-panel-content p {
+  	color: white;
+  }
+
+  #status.cd-panel, #mision.cd-panel, #tarifas.cd-panel, #comentarios.cd-panel, #rutas-mobile.cd-panel {
+  	top: 71px;
+  	width: 100%;
+  }
+
+  #status .cd-panel-container, #mision .cd-panel-container, #tarifas .cd-panel-container, #comentarios .cd-panel-container, #rutas-mobile .cd-panel-container {
+  	top: 71px;
+  	width: 100%;
+  	background-color: grey;
+  }
+
+  #status .cd-panel-content .panel, #tarifas .cd-panel-content .panel, #forum li {
+  	background-color: grey;      	
+  }
+
+  #status .cd-panel-content, #mision .cd-panel-content, #tarifas .cd-panel-content, #comentarios .cd-panel-content, #rutas-mobile .cd-panel-content {
+  	padding-top: 10px;
+  	color: white;
+  }
+
+  #status .cd-panel-content h1, #mision .cd-panel-content h1, #tarifas .cd-panel-content h1, #comentarios .cd-panel-content h1 {
+  	display: none;
+  }
+
+  #status .cd-panel-content tr {
+  	border-bottom: 2px solid black;
+  }
+
+  #status .cd-panel-header, #mision .cd-panel-header, #tarifas .cd-panel-header, #comentarios .cd-panel-header {
+  	display: none;
+  }
+
+  #time {
+    top: 5px;
+  }
+}
 
 /*****************************************************************
 	CLASSES SECTION
 *****************************************************************/
+
+.btn {
+	background-color: #EF7E1B;
+}
+
+.btn:hover {
+	background-color: #EC681F;
+}
 
 .carousel-caption {
 	top: 30%;
@@ -95,9 +237,19 @@
 
 .glyphicon-menu-hamburger {
 	font-size: 1.5em;
+	-webkit-transform: rotate(0deg);
+	   -moz-transform: rotate(0deg);
+	    -ms-transform: rotate(0deg);
+	     -o-transform: rotate(0deg);
+	        transform: rotate(0deg);
+	-webkit-transition: transform 0.6s linear;
+	   -moz-transition: transform 0.6s linear;
+	    -ms-transition: transform 0.6s linear;
+	     -o-transition: transform 0.6s linear;
+	        transition: transform 0.6s linear;
 }
 
-.footer {
+.footer, .cd-panel-content ~ div {
 	width: 100%;
 	height: 71px;
 	padding-right: 25px;
@@ -106,8 +258,19 @@
 	bottom: 0;
 	color: white;
 	font-weight: bold;
-	background-color: darkorange;
+	background-color: #EC681F;
 	z-index: 0;
+}
+
+.footer h3, .cd-panel-content ~ div h3 {
+	float: right;
+}
+
+.footer img, #ruta .cd-panel-content ~ div img {
+	float: left;
+	width: 55px;
+	margin-top: 9px;
+	margin-left: 40px;
 }
 
 .header {
@@ -140,13 +303,28 @@
 	height: auto;
 }
 
+.menu-btn, .menu-close {
+	float: left;
+	margin-left: 0 !important;
+}
+
 .nav {
 	margin: 0;
 }
 
-.panel {
-	max-height: 53%;
-	overflow: auto;
+.rotate {
+	color: black;
+	-webkit-transform: rotate(-90deg);
+	   -moz-transform: rotate(-90deg);
+	    -ms-transform: rotate(-90deg);
+	     -o-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
+
+	-webkit-transition: transform 0.3s linear;
+	   -moz-transition: transform 0.3s linear;
+	    -ms-transition: transform 0.3s linear;
+	     -o-transition: transform 0.3s linear;
+	        transition: transform 0.3s linear;
 }
 
 .sepia {
@@ -186,6 +364,10 @@ nav {
 	border: 0 !important;
 }
 
+textarea {
+	resize: none;
+}
+
 /*****************************************************************
 	COLLAPSABLE PANEL
 *****************************************************************/
@@ -216,14 +398,6 @@ nav {
 	transition: top 0.3s 0.3s;
 }
  
-.cd-panel-content ~ div {
-	background-color: darkorange;
-	width: 100%;
-	height: 71px;
-	position: absolute;
-	bottom: 0;
-}
-
 .cd-panel-container {
 	/*...*/
 	position: fixed;

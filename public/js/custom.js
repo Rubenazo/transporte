@@ -4,7 +4,7 @@ $(document).ready(function() {
 	/* 									LATERAL PANEL						                  */
 
 	//open the lateral panel
-	$('#rutas-btn').on('click', function(event){
+	$('.rutas-btn').on('click', function(event){
 		event.preventDefault();
 		$('#rutas.cd-panel').addClass('is-visible');
 	});
@@ -12,38 +12,56 @@ $(document).ready(function() {
 		event.preventDefault();
 		$('#ruta.cd-panel').addClass('is-visible');
 	});
-	$('#status-btn').on('click', function(event){
+	$('.status-btn').on('click', function(event){
 		event.preventDefault();
 		$('#status.cd-panel').addClass('is-visible');
 	});
-	$('#mision-btn').on('click', function(event){
+	$('.mision-btn').on('click', function(event){
 		event.preventDefault();
 		$('#mision.cd-panel').addClass('is-visible');
 	});
-	$('#tarifas-btn').on('click', function(event){
+	$('.tarifas-btn').on('click', function(event){
 		event.preventDefault();
 		$('#tarifas.cd-panel').addClass('is-visible');
 	});
-	$('#comentarios-btn').on('click', function(event){
+	$('.comentarios-btn').on('click', function(event){
 		event.preventDefault();
 		$('#comentarios.cd-panel').addClass('is-visible');
 	});
-	$('#menu-btn').on('click', function(event){
+	$('.rutas-mobile-btn').on('click', function(event){
 		event.preventDefault();
-		$('#menu.cd-panel').addClass('is-visible');
+		$('#rutas-mobile.cd-panel').addClass('is-visible');
 	});
+
 	//close the lateral panel
 	$('.cd-panel').on('click', function(event){
-		if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') || $(event.target).is('.sidebar-close') ) { 
+		if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') ) { 
 			$('.cd-panel[id!="rutas"]').removeClass('is-visible');
+			$('.glyphicon-menu-hamburger').removeClass('rotate');
 			event.preventDefault();
 		}
 	});
-	$('#rutas').on('click', function(event){
-		if( $(event.target).is('.sidebar-close') ) { 
-			$('#rutas').removeClass('is-visible');
-			event.preventDefault();
-		}
+	$('.sidebar-close').click(function(event) { 
+		$('.cd-panel').removeClass('is-visible');
+		event.preventDefault();
+	});
+	
+
+	////////////////////////////////////////////////////////////////////////////////////////////
+	/* 									Mobile Menu Functionality			                  */
+
+	$('.menu-btn').on('click', function(event){
+		event.preventDefault();
+		$('.cd-panel[id!="menu"]').removeClass('is-visible');
+		$('#menu.cd-panel').toggleClass('is-visible');
+		$('.glyphicon-menu-hamburger').toggleClass('rotate');
+		putTime();
+	});
+
+	$('#menu li').click(function(event) {
+		$('#time a').html($(this).data('title'));
+		$('.glyphicon-menu-hamburger').removeClass('rotate');
+		$('#menu.cd-panel').removeClass('is-visible');
 	});
 
 	////////////////////////////////////////////////////////////////////////////////////////////
@@ -64,18 +82,18 @@ $(document).ready(function() {
 				{
 					if (response['status'][i].estado == 3)
 					{
-						$('#status .table').append('<tr> <td>' + response['status'][i].ruta + 
-							'</td> <td> <span class="label label-success" >En puerta</span> </td> </tr>');
+						$('#status .table').append('<tr> <td> <img src="img/' + response['status'][i].ruta +  
+							'.png"> </td> <td> <span class="label label-success" >En puerta</span> </td> </tr>');
 					}
 					if (response['status'][i].estado == 2)
 					{
-						$('#status .table').append('<tr> <td>' + response['status'][i].ruta + 
-							'</td> <td> <span class="label label-warning">En camino</span> </td> </tr>');
+						$('#status .table').append('<tr> <td> <img src="img/' + response['status'][i].ruta + 
+							'.png"> </td> <td> <span class="label label-warning">En camino</span> </td> </tr>');
 					}
 					if (response['status'][i].estado == 1)
 					{
-						$('#status .table').append('<tr> <td>' + response['status'][i].ruta + 
-							'</td> <td> <span class="label label-danger">Se murio</span> </td> </tr>');
+						$('#status .table').append('<tr> <td> <img src="img/' + response['status'][i].ruta + 
+							'.png"> </td> <td> <span class="label label-danger">Se murio</span> </td> </tr>');
 					}
 				}
 				setTimeout(getStatus, 10000);
@@ -123,6 +141,20 @@ $(document).ready(function() {
 		});
 	}
 
+
+	////////////////////////////////////////////////////////////////////////////////////////////
+	/* 	   			                      Get the Time	                    	              */
+
+	putTime();
+	function putTime() {
+		var time = new Date();
+		$('#time a').html( (time.getHours() > 12 ? time.getHours() - 12 : time.getHours())  + ':' 
+			+ (time.getMinutes() < 10 ? '0' + time.getMinutes() : time.getMinutes()) + ' ' 
+			+ (time.getHours() >= 12 ? 'PM' : 'AM') );
+		setTimeout(putTime, 60000);
+	}
+
+
 	////////////////////////////////////////////////////////////////////////////////////////////
 	/* 	   			         Effects and data for the routes section	    	              */
 
@@ -133,67 +165,100 @@ $(document).ready(function() {
 	});
 
 	$('#rutas .col-xs-3').click(function(event) {
+		$('#ruta img:first').attr('src', $(this).data('icon'));
 		$('#ruta h1').html($(this).data('title'));
 		$('#ruta p').html($(this).data('text'));
+		$('#ruta .cd-panel-content img:last').attr('src', $(this).data('img'));
 	});
+
 
 	////////////////////////////////////////////////////////////////////////////////////////////
 	/* 	   			                     Google Maps API	                   	              */
 
-	var uba      = {lat: 10.234556, lng: -67.529622};
-  	var limon    = {lat: 10.290077, lng: -67.628116};
+	var uba      = {lat: 10.232539, lng: -67.528018}; 
+  	var limon    = {lat: 10.306494, lng: -67.633282};
   	var terminal = {lat: 10.243308, lng: -67.589285};
-  	var turmero  = {lat: 10.214833, lng: -67.485881};
-  	var cagua    = {lat: 10.186768, lng: -67.458768};
+  	var turmero  = {lat: 10.225365, lng: -67.474136};
+  	var cagua    = {lat: 10.185381, lng: -67.463018}; 
   	var victoria = {lat: 10.227940, lng: -67.331096};
 
+  	var places = [ uba, limon, terminal, turmero, cagua, victoria ];
+  	var images = [ 'img/maps/uba.png', 'img/maps/l.png', 'img/maps/tp.png', 'img/maps/ct.png', 'img/maps/ct.png', 'img/maps/v.png' ];
+  	var titles = [ 'Universidad Bicentenaria de Aragua', 'Parada El Limón', 'Parada Terminal', 'Parada Turmero', 'Parada Cagua', 'Parada Victoria'];
+
+  	var routes    = [ [uba, limon], [uba, terminal], [uba, turmero, cagua], [uba, victoria] ];
+  	var colours   = [ '#fac06d', '#363636', '#115633', '#7f1334' ];
+  	var waypoints = [];
+  	var markers   = [];
+  	var renders   = [];
+
 	var map;
+	var k = 0;
 
 	window.initMap = function() {
 
 		var directionsService = new google.maps.DirectionsService;
-  		
-  		var directionsDisplay = new google.maps.DirectionsRenderer({
-    		suppressMarkers: true,
-		    polylineOptions: {
-		      	strokeColor: "yellow",
-		      	strokeWeight: 8,  
-		    	strokeOpacity: 0.6
-		    }
-		});
-	
+
 		map = new google.maps.Map($('#map')[0], {
-	    	center: uba,
-		    zoom: 12
+	    	center: {lat: 10.258407, lng: -67.480867},
+		    zoom: 12,
+		    streetViewControl: false
 		 });
 
-		directionsDisplay.setMap(map);
+		for (var i in places) {
 
-		var image = 'img/touch/apple-touch-icon.png'
+			markers[i] = new google.maps.Marker({
+			    position: places[i],
+			    map: map,
+			    animation: google.maps.Animation.BOUNCE,
+			    icon: images[i],
+			    title: titles[i]
+			});
+		}
 
-		var ubamarker = new google.maps.Marker({
-		    position: uba,
-		    map: map,
-		    animation: google.maps.Animation.BOUNCE,
-		    icon: image,
-		    title: 'Universidad Bicentenaria de Aragua'
-		 });
+		for (var i in routes) {
 
-		calculateAndDisplayRoute(directionsService, directionsDisplay);
+			waypoints = [];
+			data   = routes[i];
+			length = data.length;
+
+			if (length > 2) {
+
+				for (var j = 1; j < length-1; j++) {
+					waypoints.push({
+	                    location: data[j],
+	                    stopover: true
+               		});
+				}
+			}
+			directionsService.route({
+			    origin: data[0],
+			    destination: data[length-1],
+			    waypoints: waypoints,
+			    travelMode: google.maps.TravelMode.DRIVING
+				}, directionResults 
+			);
+		}
 	}
 
-	function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-		directionsService.route({
-		    origin: uba,
-		    destination: limon,
-		    travelMode: google.maps.TravelMode.DRIVING
-		}, function(response, status) {
-		    if (status === google.maps.DirectionsStatus.OK) {
-		    	directionsDisplay.setDirections(response);
-		    } else {
-		    	window.alert('Directions request failed due to ' + status);
-		    }
-		});
+	function directionResults(results, status) {
+		if (status === google.maps.DirectionsStatus.OK) {
+	    	renders[k] = new google.maps.DirectionsRenderer();
+			renders[k].setMap(map);
+	    	renders[k].setOptions({
+	    		suppressMarkers: true,
+	    		preserveViewport: true,
+			    polylineOptions: {
+			      	strokeColor: colours[k],
+			      	strokeWeight: 4,  
+			    	strokeOpacity: 0.6
+			    }
+			});
+	    	renders[k].setDirections(results);
+	    } else {
+	    	window.alert('Directions request failed due to ' + status);
+		}
+	    k++;
 	}
 
 });
