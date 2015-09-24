@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html class="no-js" lang="es">
     <head>
         <meta charset="utf-8">
         <title>Ruta Uba</title>
@@ -79,6 +79,7 @@
                             <li class="mision-btn"><a>Mision y Vision</a></li>
                             <li class="tarifas-btn"><a>Tarifas</a></li>
                             <li class="comentarios-btn"><a>Comentarios</a></li>
+                            <li id="noti" tabindex="0" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Dismissible popover" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."><a>Notificaciones</a></li>
                         </ul>
                         <ul id="mobile-header" class="nav navbar-nav">
                             <li class="menu-btn visible-xs"><a><span class="glyphicon glyphicon-menu-hamburger"></span></a></li>

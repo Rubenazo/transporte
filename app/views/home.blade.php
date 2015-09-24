@@ -215,11 +215,11 @@
 			<div class="cd-panel-content">
 				<h1>Misión</h1>
 
-				<p>Satisfacer la necesidades diarias de los usuarios en materia de transporte mediante una experiencia de excelencia en calidad de tiempo, comodidad y seguridad; con personal calificado y capacitado para la operación de unidades debidamente acondicionadas para garantizar al servicio de transporte ejecutivo que nuestros usuarios merecen.</p>
+				<p>Prestar servicios de transporte de forma integral y de alta calidad, que genere valor para nuestros trabajadores y estudiantes. La organización cuenta con una a flota de 27 unidades y personal operativo de primera, que cumplen con normas de seguridad a fin de alcanzar plena satisfacción de nuestros clientes.</p>
 
 				<h1>Visión</h1>
 
-				<p>Consolidarnos y llegar a ser la principal alternativa de transporte ejecutivo para los usuarios, mediante una propuesta de alto valor y de carácter interactivo que permita el crecimiento y la expansión; manteniendo los principios fundamentales para brindar cada día un mejor servicio de manera eficiente.</p>
+				<p>Somos proactivos, con ideales de expansión. Sustentamos nuestra gestión en valores como la responsabilidad, seriedad, profesionalismo, honradez, disciplina y eficiencia. Estamos comprometidos en suscribir alianzas estratégicas para cumplir con las necesidades del usuario.</p>
 			</div> <!-- cd-panel-content -->
 			<div>
 				<h3>rutauba</h3>

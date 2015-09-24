@@ -21,7 +21,6 @@ class ForumController extends BaseController {
 		$message->comentario = $inp['message'];
 
 		if ($message->save()) {
-			Session::flash('success','Comentario añadido');
 			return Redirect::to('/');
 		}else {
 			Session::flash('danger','Error al añadir comentario');
