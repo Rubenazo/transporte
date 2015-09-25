@@ -115,7 +115,8 @@
 
         <script src="js/vendor/jquery-2.1.0.min.js"></script>
         <script src="js/helper.js"></script>
-        <script src="js/main.js"></script>    
+        <script src="js/main.js"></script>
+        <script src="js/plugins.js"></script>    
 
         <script src="js/bootstrap.js"></script>
         <script src="js/custom.js"></script>
