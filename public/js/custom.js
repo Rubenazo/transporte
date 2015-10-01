@@ -82,20 +82,15 @@ $(document).ready(function() {
 				$('#status .table').empty();
 				for (var i in response['status'])
 				{
-					if (response['status'][i].estado == 3)
+					if (response['status'][i].estado == 1)
 					{
 						$('#status .table').append('<tr> <td> <img src="img/' + response['status'][i].ruta +  
-							'.png"> </td> <td> <span class="label label-success" >En puerta</span> </td> </tr>');
+							'.png"> </td> <td> <span class="label label-success" >Disponible</span> </td> </tr>');
 					}
 					if (response['status'][i].estado == 2)
 					{
 						$('#status .table').append('<tr> <td> <img src="img/' + response['status'][i].ruta + 
-							'.png"> </td> <td> <span class="label label-warning">En camino</span> </td> </tr>');
-					}
-					if (response['status'][i].estado == 1)
-					{
-						$('#status .table').append('<tr> <td> <img src="img/' + response['status'][i].ruta + 
-							'.png"> </td> <td> <span class="label label-danger">Se murio</span> </td> </tr>');
+							'.png"> </td> <td> <span class="label label-danger">En Camino</span> </td> </tr>');
 					}
 				}
 				setTimeout(getStatus, 10000);

@@ -90,8 +90,6 @@
 
 				<img>
 
-				<h4>Choferes</h4>
-			
 			</div> <!-- cd-panel-content -->
 			<div>
                 <img src="img/logo.png">
@@ -174,7 +172,6 @@
 				        El traslado de pasajeros de la ruta Universidad Bicentenaria de Aragua (UBA)- La Victoria se ejecuta por la Autopista Regional del Centro (ARC).<br/> 
 						Se disponen de siete paradas: Peaje de La Victoria, Centro Comercial Morichal, Plaza Italia, tres puntos en la  Urbanización La Mora I y uno en La Mora II.
 				      	<img src="img/ruta-victoria.png">
-				      	<h4>Choferes</h4>
 				      </div>
 				    </div>
 				  </div>

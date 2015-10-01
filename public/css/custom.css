@@ -234,6 +234,10 @@
 	cursor: default;
 }
 
+.cd-panel-content {
+	padding-bottom: 150px;
+}
+
 .container {
 	padding-left: 0;
 	padding-right: 0;
@@ -273,7 +277,12 @@
 	z-index: 0;
 }
 
-.footer h3, .cd-panel-content ~ div h3 {
+.footer h6 {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.footer h6, .cd-panel-content ~ div h3 {
 	float: right;
 }
 
@@ -282,6 +291,10 @@
 	width: 55px;
 	margin-top: 9px;
 	margin-left: 40px;
+}
+
+.form-control:focus {
+    border-color: #EF7E1B;
 }
 
 .header {

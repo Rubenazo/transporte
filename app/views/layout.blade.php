@@ -47,7 +47,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         
-        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
 
         <link rel="stylesheet" href="css/custom.css">
 
@@ -106,7 +106,7 @@
 
                 <div class="footer">
                     <img src="img/logo.png">
-                    <h3>rutauba</h3>
+                    <h6>Unidad de Marketing Digital<br/>Universidad Bicentenaria de Aragua</h6>
                 </div>
 
             </div>
@@ -118,7 +118,7 @@
         <script src="js/main.js"></script>
         <script src="js/plugins.js"></script>    
 
-        <script src="js/bootstrap.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <script src="js/custom.js"></script>
 
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8g7akf4R7bcfLNCwktwgYsATlAMvDxlk&callback=window.initMap">
