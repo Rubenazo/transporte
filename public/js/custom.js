@@ -90,7 +90,12 @@ $(document).ready(function() {
 					if (response['status'][i].estado == 2)
 					{
 						$('#status .table').append('<tr> <td> <img src="img/' + response['status'][i].ruta + 
-							'.png"> </td> <td> <span class="label label-danger">En Camino</span> </td> </tr>');
+							'.png"> </td> <td> <span class="label label-warning">En Camino</span> </td> </tr>');
+					}
+					if (response['status'][i].estado == 3)
+					{
+						$('#status .table').append('<tr> <td> <img src="img/' + response['status'][i].ruta + 
+							'.png"> </td> <td> <span class="label label-danger">Fuera de Servicio</span> </td> </tr>');
 					}
 				}
 				setTimeout(getStatus, 10000);
@@ -177,7 +182,7 @@ $(document).ready(function() {
   	var terminal = {lat: 10.243308, lng: -67.589285};
   	var turmero  = {lat: 10.225365, lng: -67.474136};
   	var cagua    = {lat: 10.185381, lng: -67.463018}; 
-  	var victoria = {lat: 10.227940, lng: -67.331096};
+  	var victoria = {lat: 10.232998, lng: -67.305062};
 
   	var places = [ uba, limon, terminal, turmero, cagua, victoria ];
   	var images = [ 'img/maps/uba.png', 'img/maps/l.png', 'img/maps/tp.png', 'img/maps/ct.png', 'img/maps/ct.png', 'img/maps/v.png' ];

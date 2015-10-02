@@ -38,23 +38,27 @@
 					<table class="table">
 						<tr>
 							<td id="1">El Limon</td>
-							<td><button class="btn btn-success" status="1" style="background-color:green">Disponible</button></td>
-							<td><button class="btn btn-danger" status="2" style="background-color:red">En Camino</button></td>
+							<td><button class="btn btn-success" status="1">Disponible</button></td>
+							<td><button class="btn btn-warning" status="2">En Camino</button></td>
+							<td><button class="btn btn-danger" status="3">Fuera de Servicio</button></td>
 						</tr>
 						<tr>
 							<td id="2">Terminal</td>
-							<td><button class="btn btn-success" status="1" style="background-color:green">Disponible</button></td>
-							<td><button class="btn btn-danger" status="2" style="background-color:red">En Camino</button></td>
+							<td><button class="btn btn-success" status="1">Disponible</button></td>
+							<td><button class="btn btn-warning" status="2">En Camino</button></td>
+							<td><button class="btn btn-danger" status="3">Fuera de Servicio</button></td>
 						</tr>
 						<tr>
 							<td id="3">Turmero-Cagua</td>
-							<td><button class="btn btn-success" status="1" style="background-color:green">Disponible</button></td>
-							<td><button class="btn btn-danger" status="2" style="background-color:red">En Camino</button></td>
+							<td><button class="btn btn-success" status="1">Disponible</button></td>
+							<td><button class="btn btn-warning" status="2">En Camino</button></td>
+							<td><button class="btn btn-danger" status="3">Fuera de Servicio</button></td>
 						</tr>
 						<tr>
 							<td id="4">La Victoria</td>
-							<td><button class="btn btn-success" status="1" style="background-color:green">Disponible</button></td>
-							<td><button class="btn btn-danger" status="2" style="background-color:red">En Camino</button></td>
+							<td><button class="btn btn-success" status="1">Disponible</button></td>
+							<td><button class="btn btn-warning" status="2">En Camino</button></td>
+							<td><button class="btn btn-danger" status="3">Fuera de Servicio</button></td>
 						</tr>
 					</table>
 				</div>
@@ -65,6 +69,7 @@
 
 			$('button').click(function() {
 
+				var boton  = $(this);
 				var id     = $(this).parent().siblings().first().attr('id');
 				var status = $(this).attr('status'); 
 
@@ -73,14 +78,18 @@
 					type: 'POST',
 					data: {'id':id, 'status': status},
 					success:function() {
-						console.log(status);
-						if ( status == 1 )
+
+						if( status == 1 )
 						{
-							$(this).parents('tr').css('background-color', 'lightgreen');
+							boton.parents('tr').css('background-color', 'lightgreen');
 						} 
-						else 
+						if( status == 2 ) 
 						{
-							$(this).parents('tr').css('background-color', 'lightred');
+							boton.parents('tr').css('background-color', 'gold');
+						}
+						if( status == 3 ) 
+						{
+							boton.parents('tr').css('background-color', 'tomato');
 						}
 					}
 				});
