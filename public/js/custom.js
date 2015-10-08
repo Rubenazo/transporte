@@ -162,7 +162,7 @@ $(document).ready(function() {
 
 	$('.carousel-caption').hide();
 	$('#rutas .col-xs-3').hover(function() {
-		$(this).children('img').toggleClass('sepia');
+		$(this).children('img').toggleClass('grayscale');
 		$(this).children('.carousel-caption').stop().fadeToggle('slow');
 	});
 

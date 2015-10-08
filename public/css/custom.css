@@ -62,8 +62,16 @@
 	width: 100%;
 }
 
+#rutas .carousel-caption h2 {
+	text-shadow: 2px 2px 4px black;
+}
+
 #rutas .carousel-caption img {
+	position: absolute;
 	margin: auto;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	width: 75%;
 }
 
@@ -167,6 +175,10 @@
 @media (max-width: 767px) {
   .footer {
   	z-index: 100 !important;
+  }
+
+  .footer img {
+  	margin-left: 20px !important;
   }
 
   #mision .cd-panel-content p {
@@ -278,7 +290,7 @@
 }
 
 .footer h6 {
-	margin-top: 20px;
+	margin-top: 21px;
 	text-align: center;
 }
 
@@ -351,12 +363,12 @@
 	        transition: transform 0.3s linear;
 }
 
-.sepia {
-	-webkit-filter: sepia(100%);
-	   -moz-filter: sepia(100%);
-	    -ms-filter: sepia(100%);
-	     -o-filter: sepia(100%);
-	        filter: sepia(100%);
+.grayscale {
+	-webkit-filter: grayscale(100%);
+	   -moz-filter: grayscale(100%);
+	    -ms-filter: grayscale(100%);
+	     -o-filter: grayscale(100%);
+	        filter: grayscale(100%);
 
     -webkit-transition: all .50s linear;
        -moz-transition: all .50s linear;

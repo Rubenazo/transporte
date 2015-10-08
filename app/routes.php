@@ -18,9 +18,8 @@ Route::get('status', 'StatusController@getStatus');
 Route::get('comment', 'ForumController@getComments');
 Route::post('comment', 'ForumController@postComment');
 
-
 Route::get('admin', 'AdminController@showAdmin');
-Route::post('update', 'AdminController@postUpdate');
+Route::post('login', 'AdminController@login');
 
-
-
+Route::get('update', 'AdminController@getUpdate');
+Route::post('update', array('before' => 'auth', 'uses' => 'AdminController@postUpdate'));

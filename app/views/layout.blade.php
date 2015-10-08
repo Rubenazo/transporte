@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Ruta Uba</title>
-        <meta name="description" content="">
+        <meta name="description" content="La Universidad Bicentenaria de Aragua pone a disposición de estudiantes y usuarios el servicio de transporte privado. Contamos con unidades colectivas que ofrecen confort. Garantizamos traslados / viajes en primera clase. Ofrecemos rutas para Maracay, estado Aragua (Venezuela).">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
@@ -18,7 +18,7 @@
 
         <!-- Tile icon for Win8 (144x144 + tile color) -->
         <meta name="msapplication-TileImage" content="img/touch/logo-144.png">
-        <meta name="msapplication-TileColor" content="#222222">
+        <meta name="msapplication-TileColor" content="#EF7E1B">
 
         <!-- SEO: If mobile URL is different from desktop URL, add a canonical link to the desktop page -->
         <!--
@@ -105,7 +105,7 @@
                 @yield('content')
 
                 <div class="footer">
-                    <img src="img/logo.png">
+                    <img src="img/logo.png" alt="Transporte True">
                     <h6>Unidad de Marketing Digital<br/>Universidad Bicentenaria de Aragua</h6>
                 </div>
 
@@ -131,7 +131,7 @@
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+            ga('create','UA-68468628-1');ga('send','pageview');
         </script>
     </body>
 </html>
