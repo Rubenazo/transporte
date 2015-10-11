@@ -10,7 +10,7 @@ $(document).ready(function() {
 		event.preventDefault();
 		$('#rutas.cd-panel').addClass('is-visible');
 	});
-	$('#rutas .col-xs-3').on('click', function(event){
+	$('#rutas li').on('click', function(event){
 		event.preventDefault();
 		$('#ruta.cd-panel').addClass('is-visible');
 	});
@@ -160,17 +160,29 @@ $(document).ready(function() {
 	////////////////////////////////////////////////////////////////////////////////////////////
 	/* 	   			         Effects and data for the routes section	    	              */
 
-	$('.carousel-caption').hide();
-	$('#rutas .col-xs-3').hover(function() {
-		$(this).children('img').toggleClass('grayscale');
-		$(this).children('.carousel-caption').stop().fadeToggle('slow');
-	});
-
-	$('#rutas .col-xs-3').click(function(event) {
+	$('#rutas li').click(function(event) {
 		$('#ruta img:first').attr('src', $(this).data('icon'));
 		$('#ruta h1').html($(this).data('title'));
 		$('#ruta p').html($(this).data('text'));
 		$('#ruta .cd-panel-content img:last').attr('src', $(this).data('img'));
+	});
+
+	jQuery(document).ready(function($) {
+		$('.showcase-panels-container > ul > li').hover(function() {
+			$(this).parents('.showcase-panels-container').attr('data-hover', $(this).index());
+			$(this).addClass('hovered');
+			var $this = $(this);
+			$(this).siblings().each(function() {
+				if ($(this).index() < $this.index()) {
+					$(this).addClass('right-was-hovered');
+				} else if ($(this).index() > $this.index()) {
+					$(this).addClass('left-was-hovered');
+				}
+			});
+		}, function() {
+			$(this).parents('.showcase-panels-container').removeAttr('data-hover')
+			.find('> ul > li').removeClass('hovered right-was-hovered left-was-hovered');
+		});
 	});
 
 

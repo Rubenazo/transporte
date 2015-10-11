@@ -62,26 +62,23 @@
 	width: 100%;
 }
 
-#rutas .carousel-caption h2 {
-	text-shadow: 2px 2px 4px black;
-}
-
-#rutas .carousel-caption img {
-	position: absolute;
-	margin: auto;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	width: 75%;
-}
-
 #rutas .cd-panel-content {
 	padding: 0;
 }
 
-#rutas .col-xs-11, #rutas .col-xs-3, #rutas .col-xs-3 > img, #rutas div:not([class="carousel-caption"]) {
+#rutas div {
 	height: 100%;
 	padding: 0;
+}
+
+#rutas img {
+	width: 25%;
+	margin-top: 25px;
+	margin-left: 25px;
+}
+
+#rutas li {
+	cursor: pointer;
 }
 
 #rutas-mobile .panel, #rutas-mobile .panel-heading {
@@ -405,7 +402,7 @@ textarea {
 }
 
 /*****************************************************************
-	COLLAPSABLE PANEL
+	SLIDE IN PANEL
 *****************************************************************/
 
 .cd-panel {
@@ -452,4 +449,32 @@ textarea {
 .is-visible .cd-panel-container {
 	transform: translate3d(0, 0, 0);
 	transition-delay: 0s;
+}
+
+
+/*****************************************************************
+	SMOOTH ACCORDION SLIDER
+*****************************************************************/
+
+.panel1 { background: url('../img/fondos/limon.jpg'); }
+
+.panel2 { background: url('../img/fondos/terminal.jpg'); }
+
+.panel3 { background: url('../img/fondos/cagua.jpg'); }
+
+.panel4 { background: url('../img/fondos/victoria.jpg'); }
+
+.panel5 { background: url('../img/fondos/palonegro.jpg'); }
+
+.panel6 { background: url('../img/fondos/sanjacinto.jpg'); }
+
+.showcase-panels-container { height: 300px; width: 100% }
+
+.showcase-panels-container > ul > li { width: 16.666%; }
+
+.showcase-panels-container > ul > li:last-of-type { width: 16.666%; }
+
+.showcase-panels-container[data-hover] > ul > li { width: 120px; }
+
+.showcase-panels-container > ul > li.hovered {  width: calc(100% - 120px * 5);
 }

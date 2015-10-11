@@ -43,6 +43,7 @@
 
         <link rel="stylesheet" href="css/reset.css"> 
         <link rel="stylesheet" href="css/slide-in-panel.css">
+        <link rel="stylesheet" href="css/smoothAccordionSlider.css">
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
