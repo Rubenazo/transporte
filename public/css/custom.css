@@ -78,6 +78,7 @@
 }
 
 #rutas li {
+	background-size: cover;
 	cursor: pointer;
 }
 
@@ -291,6 +292,11 @@
 	text-align: center;
 }
 
+.footer h6 a {
+	color: white;
+	text-decoration: none;
+}
+
 .footer h6, .cd-panel-content ~ div h3 {
 	float: right;
 }
@@ -470,11 +476,11 @@ textarea {
 
 .showcase-panels-container { height: 300px; width: 100% }
 
-.showcase-panels-container > ul > li { width: 16.666%; }
+.showcase-panels-container > ul > li { width: 25%; }
 
-.showcase-panels-container > ul > li:last-of-type { width: 16.666%; }
+.showcase-panels-container > ul > li:last-of-type { width: 25%; }
 
 .showcase-panels-container[data-hover] > ul > li { width: 120px; }
 
-.showcase-panels-container > ul > li.hovered {  width: calc(100% - 120px * 5);
+.showcase-panels-container > ul > li.hovered {  width: calc(100% - 120px * 3);
 }

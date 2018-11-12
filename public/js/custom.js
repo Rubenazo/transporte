@@ -109,7 +109,9 @@ $(document).ready(function() {
 	getComments();
 
 	$('#submit').click(function(event) {
-	
+
+		var $btn = $(this).button('loading');
+
 		$.ajax({
 			url: '../public/comment',
 			type: 'POST',
@@ -117,6 +119,7 @@ $(document).ready(function() {
 			success:function(response) {
 				$('#comment')[0].reset();
 				getComments();
+				$btn.button('reset')
 			}
 		});
 

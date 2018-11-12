@@ -23,8 +23,6 @@
 							La ruta continúa hacia La Encrucijada hasta llegar a la Panadería Don Pan, ubicada en el centro de Cagua." data-img="img/ruta-cagua.png"><img src="img/cagua.png" alt="Turmero/Cagua"></li>
 						    <li class="panel4 showcase-panel" data-icon="img/victoria.png" data-title="La Victoria" data-text="El traslado de pasajeros de la ruta Universidad Bicentenaria de Aragua (UBA)- La Victoria se ejecuta por la Autopista Regional del Centro (ARC).<br/> 
 							Se disponen de siete paradas: Peaje de La Victoria, Centro Comercial Morichal, Plaza Italia, tres puntos en la  Urbanización La Mora I y uno en La Mora II." data-img="img/ruta-victoria.png"><img src="img/victoria.png" alt="La Victoria"></li>
-						    <li class="panel5 showcase-panel"><img src="img/limon.png" alt="El Limon"></li>
-						    <li class="panel6 showcase-panel"><img src="img/limon.png" alt="El Limon"></li>
 						</ul>
 					</div>
 				</div>
@@ -200,23 +198,23 @@
 		  				</tr>
 						<tr>
 							<td>El Limón</td>
-							<td>70 Bs</td>
 							<td>80 Bs</td>
+							<td>90 Bs</td>
 						</tr>
 						<tr>
 							<td>Terminal</td>
-							<td>50 Bs</td>
 							<td>60 Bs</td>
+							<td>70 Bs</td>
 						</tr>
 						<tr>
 							<td>Turmero</td>
-							<td>50 Bs</td>
 							<td>60 Bs</td>
+							<td>70 Bs</td>
 						</tr>
 						<tr>
 							<td>Cagua</td>
-							<td>60 Bs</td>
 							<td>70 Bs</td>
+							<td>80 Bs</td>
 						</tr>
 						<tr>
 							<td>La Victoria</td>
@@ -255,7 +253,7 @@
 					<div class="form-group">
 						{{ Form::textarea('message', Input::old('message'), array('class'=>'form-control', 'placeholder'=>'Escribir comentario...', 'rows'=>'3', 'maxlength'=>'140', 'autocomplete'=>'off')) }}
 					</div>
-					{{ Form::submit('Enviar', array('id'=>'submit', 'class'=>'btn btn-warning')) }}
+					{{ Form::submit('Enviar', array('id'=>'submit', 'class'=>'btn btn-warning', 'data-loading-text'=>'Cargando...')) }}
 				{{ Form::close() }}
 			</div> <!-- cd-panel-content -->
 			<div>

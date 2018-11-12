@@ -107,7 +107,7 @@
 
                 <div class="footer">
                     <img src="img/logo.png" alt="Transporte True">
-                    <h6>Unidad de Marketing Digital<br/>Universidad Bicentenaria de Aragua</h6>
+                    <h6><a href="http://uba.edu.ve">Unidad de Marketing Digital<br/>Universidad Bicentenaria de Aragua</a></h6>
                 </div>
 
             </div>
